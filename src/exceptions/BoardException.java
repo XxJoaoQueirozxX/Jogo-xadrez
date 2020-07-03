@@ -1,7 +1,7 @@
 package exceptions;
 
-public class BoardException extends Exception{
-    public BoardException(String message) throws Exception {
+public class BoardException extends RuntimeException{
+    public BoardException(String message){
         super(message);
     }
 }
