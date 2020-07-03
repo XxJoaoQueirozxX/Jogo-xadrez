@@ -15,7 +15,7 @@ public abstract class Piece {
     }
 
 
-    public abstract boolean[][] possibleMoves();
+//    public abstract boolean[][] possibleMoves();
 
     public boolean possibleMove(Position position){
         return true;

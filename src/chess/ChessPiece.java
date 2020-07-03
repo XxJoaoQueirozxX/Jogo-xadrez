@@ -31,9 +31,4 @@ public abstract class ChessPiece extends Piece implements Serializable {
     public int getMoveCount() {
         return moveCount;
     }
-
-    @Override
-    public String toString() {
-        return "-";
-    }
 }
