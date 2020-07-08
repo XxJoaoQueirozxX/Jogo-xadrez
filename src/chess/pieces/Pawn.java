@@ -6,16 +6,16 @@ import chess.Color;
 
 import java.io.Serializable;
 
-public class King extends ChessPiece implements Serializable {
-    public King(Board board, Color color) {
+public class Pawn extends ChessPiece implements Serializable {
+    public Pawn(Board board, Color color) {
         super(board, color);
     }
 
     @Override
     public String toString() {
         if (getColor().toString().equals("WHITE")){
-            return "\u2654";
+            return "\u2659";
         }
-        return "\u265A";
+        return "\u265F";
     }
 }

@@ -14,11 +14,16 @@ public class UI {
             System.out.println();
             i -= 1;
         }
-        System.out.println("  a b c d e f g h");
+        System.out.println("  \u0041  \u0042 \u2009\u2009\u0043 \u2009\u2009\u0044 \u2009\u2009\u0045 \u2009\u0046 \u2009\u2009\u0047 \u2009\u2009\u2009\u0048");
     }
 
     public static void printPiece (ChessPiece piece){
-        System.out.print((piece != null) ? piece : "-");
+        System.out.print((piece != null) ? piece : "\u2015");
         System.out.print(" ");
+    }
+
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }

@@ -11,5 +11,7 @@ public class Teste {
         ChessMatch chess = new ChessMatch();
 
         UI.printBoard(chess.getPieces());
+
+
     }
 }

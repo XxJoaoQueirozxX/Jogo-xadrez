@@ -13,6 +13,9 @@ public class Rook extends ChessPiece implements Serializable {
 
     @Override
     public String toString() {
-        return "R";
+        if (getColor().toString().equals("WHITE")){
+            return "\u2656";
+        }
+        return "\u265C";
     }
 }
