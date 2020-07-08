@@ -1,8 +1,27 @@
 package applications;
 
 import chess.ChessPiece;
+import chess.ChessPosition;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class UI {
+
+
+
+    public static ChessPosition readChessPosition(Scanner sc){
+        try{
+            String pos = sc.nextLine().trim();
+
+            char column = pos.charAt(0);
+            int row = Integer.parseInt(pos.substring(1));
+            return new ChessPosition(column, row);
+        }
+        catch (RuntimeException e){
+            throw new InputMismatchException("Erro reading ChessPosition. Valid values are from a1 to h8.");
+        }
+    }
 
     public static void printBoard(ChessPiece[][] chessPieces) {
         int i = chessPieces.length;
