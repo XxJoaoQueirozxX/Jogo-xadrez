@@ -17,8 +17,8 @@ public abstract class ChessPiece extends Piece implements Serializable {
 
 
     protected boolean isThereOpponentPiece(Position position){
-//        return color == getBoard().piece(position);
-        return true;
+        ChessPiece p = (ChessPiece) getBoard().piece(position);
+        return p!= null && p.getColor() != color;
     }
 
 

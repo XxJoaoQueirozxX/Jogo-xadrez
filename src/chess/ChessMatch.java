@@ -56,10 +56,18 @@ public class ChessMatch {
 
         validateSourcePosition(source);
 
+        validateTargetPosition(source, target);
+
         Piece capturedPiece = makeMove(source, target);
 
 
         return (ChessPiece) capturedPiece;
+    }
+
+    private void validateTargetPosition(Position source, Position target) {
+        if (!board.piece(source).possibleMove(target)){
+            throw new ChessException("The chosen piece cant move to target position. ");
+        }
     }
 
     private void placeNewPiece(char column, int row, ChessPiece piece){
@@ -69,10 +77,10 @@ public class ChessMatch {
     private void initialSetup(){
 
         //        Pocionamento dos peões
-        for (int i = 0; i < 8; i++){
-            placeNewPiece((char) ('a' + i), 2,new Pawn(board, Color.WHITE));
-            placeNewPiece((char) ('a' + i), 7,new Pawn(board, Color.BLACK));
-        }
+//        for (int i = 0; i < 8; i++){
+//            placeNewPiece((char) ('a' + i), 2,new Pawn(board, Color.WHITE));
+//            placeNewPiece((char) ('a' + i), 7,new Pawn(board, Color.BLACK));
+//        }
 
 
         //        Posicionamento das torres
