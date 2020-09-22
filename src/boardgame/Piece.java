@@ -15,13 +15,18 @@ public abstract class Piece {
     }
 
 
-//    public abstract boolean[][] possibleMoves();
+    public abstract boolean[][] possibleMoves();
 
     public boolean possibleMove(Position position){
-        return true;
+        return possibleMoves()[position.getRow()][position.getColumn()];
     }
 
     public boolean isThereAnyPossibleMove(){
-        return true;
+        for (boolean[] row : possibleMoves()){
+            for (boolean col: row){
+                if (col){ return true; }
+            }
+        }
+        return false;
     }
 }

@@ -6,7 +6,7 @@ import chess.Color;
 
 import java.io.Serializable;
 
-public class King extends ChessPiece implements Serializable {
+public class King extends ChessPiece{
     public King(Board board, Color color) {
         super(board, color);
     }
@@ -17,5 +17,11 @@ public class King extends ChessPiece implements Serializable {
             return "\u2654";
         }
         return "\u265A";
+    }
+
+    @Override
+    public boolean[][] possibleMoves() {
+        boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
+        return mat;
     }
 }

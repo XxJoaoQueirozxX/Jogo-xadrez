@@ -18,4 +18,11 @@ public class Pawn extends ChessPiece implements Serializable {
         }
         return "\u265F";
     }
+
+
+    @Override
+    public boolean[][] possibleMoves() {
+        boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
+        return mat;
+    }
 }
