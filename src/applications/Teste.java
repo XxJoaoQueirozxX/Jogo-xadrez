@@ -1,10 +1,8 @@
 package applications;
 
-import boardgame.Board;
 import chess.ChessMatch;
 import  chess.ChessPiece;
 import chess.ChessPosition;
-import exceptions.BoardException;
 import exceptions.ChessException;
 
 import java.util.ArrayList;
@@ -18,10 +16,10 @@ public class Teste {
 
         ChessMatch chess = new ChessMatch();
         List<ChessPiece> captured = new ArrayList<>();
-        while (true){
+        while (!chess.getCheckMate()){
             try {
                 UI.clearScreen();
-                UI.PrintMatch(chess, captured);
+                UI.printMatch(chess, captured);
                 System.out.printf("%nSource: ");
                 ChessPosition source = UI.readChessPosition(sc);
 
@@ -44,5 +42,13 @@ public class Teste {
                 sc.nextLine();
             }
         }
+
+
+        UI.clearScreen();
+        UI.printMatch(chess, captured);
+
+
+
+
     }
 }
