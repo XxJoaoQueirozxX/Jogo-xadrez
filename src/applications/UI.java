@@ -127,5 +127,4 @@ public class UI {
         System.out.print(ANSI_RESET);
     }
 
-
 }
