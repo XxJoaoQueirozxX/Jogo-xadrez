@@ -24,6 +24,11 @@ public class Teste {
                 System.out.printf("%nSource: ");
                 ChessPosition source = UI.readChessPosition(sc);
 
+                boolean[][] possibleMoves = chess.possibleMoves(source);
+                UI.clearScreen();
+                UI.printBoard(chess.getPieces() ,possibleMoves);
+
+
                 System.out.printf("%nTarget: ");
                 ChessPosition target = UI.readChessPosition(sc);
 

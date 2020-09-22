@@ -29,4 +29,11 @@ public class Position implements Serializable {
                 row + ", "+ column;
     }
 
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
 }
