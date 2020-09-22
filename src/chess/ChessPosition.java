@@ -27,7 +27,7 @@ public class ChessPosition {
         if (position.getColumn() >= 8 || position.getColumn()  < 0){
             throw new BoardException("BoardException error: Column value is out of range (" +position.getColumn()+ ")");
         }
-        return new ChessPosition((char) ('a' - position.getColumn()), 8 - position.getRow());
+        return new ChessPosition((char) ('a' + position.getColumn()), 8 - position.getRow());
     }
 
     @Override
