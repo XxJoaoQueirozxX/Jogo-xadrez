@@ -231,11 +231,11 @@ public class ChessMatch {
 //
 //
 //        //        Posicionamento dos bispos
-//        placeNewPiece('c', 1, new Bishop(board, Color.WHITE));
-//        placeNewPiece('f', 1, new Bishop(board, Color.WHITE));
-//
-//        placeNewPiece('c', 8, new Bishop(board, Color.BLACK));
-//        placeNewPiece('f', 8, new Bishop(board, Color.BLACK));
+        placeNewPiece('c', 1, new Bishop(board, Color.WHITE));
+        placeNewPiece('f', 1, new Bishop(board, Color.WHITE));
+
+        placeNewPiece('c', 8, new Bishop(board, Color.BLACK));
+        placeNewPiece('f', 8, new Bishop(board, Color.BLACK));
 //
 //
 //        //        Posicionamento dos reis
