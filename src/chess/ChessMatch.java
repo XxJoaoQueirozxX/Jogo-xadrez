@@ -124,10 +124,9 @@ public class ChessMatch {
         check = testCheck(opponent(currentPlayer));
 
 
-        if (testCheckMate(opponent(currentPlayer))){
+        if (testCheckMate(opponent(currentPlayer))) {
             checkMate = true;
-        }
-        else{
+        } else {
             nextTurn();
         }
         return (ChessPiece) capturedPiece;
@@ -208,52 +207,44 @@ public class ChessMatch {
     private void initialSetup() {
 
 //                Pocionamento dos peões
-        for (int i = 0; i < 8; i++){
-            placeNewPiece((char) ('a' + i), 2,new Pawn(board, Color.WHITE));
-            placeNewPiece((char) ('a' + i), 7,new Pawn(board, Color.BLACK));
+        for (int i = 0; i < 8; i++) {
+            placeNewPiece((char) ('a' + i), 2, new Pawn(board, Color.WHITE));
+            placeNewPiece((char) ('a' + i), 7, new Pawn(board, Color.BLACK));
         }
 
 
-//        //        Posicionamento das torres
+        //        Posicionamento das torres
         placeNewPiece('a', 1, new Rook(board, Color.WHITE));
         placeNewPiece('h', 1, new Rook(board, Color.WHITE));
-//
+
         placeNewPiece('a', 8, new Rook(board, Color.BLACK));
         placeNewPiece('h', 8, new Rook(board, Color.BLACK));
-//
-//
-//        //        Posicionamento dos cavalos
+
+        //        Posicionamento dos cavalos
         placeNewPiece('b', 1, new Knight(board, Color.WHITE));
         placeNewPiece('g', 1, new Knight(board, Color.WHITE));
 
         placeNewPiece('b', 8, new Knight(board, Color.BLACK));
         placeNewPiece('g', 8, new Knight(board, Color.BLACK));
-//
-//
-//        //        Posicionamento dos bispos
+
+
+        //        Posicionamento dos bispos
         placeNewPiece('c', 1, new Bishop(board, Color.WHITE));
         placeNewPiece('f', 1, new Bishop(board, Color.WHITE));
 
         placeNewPiece('c', 8, new Bishop(board, Color.BLACK));
         placeNewPiece('f', 8, new Bishop(board, Color.BLACK));
-//
-//
-//        //        Posicionamento dos reis
+
+
+        //        Posicionamento dos reis
         placeNewPiece('d', 1, new King(board, Color.WHITE));
         placeNewPiece('d', 8, new King(board, Color.BLACK));
-//
-//
-//        //        Posicionamento das rainhas
-//        placeNewPiece('e', 1, new Queen(board, Color.WHITE));
-//        placeNewPiece('e', 8, new Queen(board, Color.BLACK));
-//    }
-//        placeNewPiece('h', 7, new Rook(board, Color.WHITE));
-//        placeNewPiece('d', 1, new Rook(board, Color.WHITE));
-//        placeNewPiece('e', 1, new King(board, Color.WHITE));
-//
-//
-//        placeNewPiece('b', 8, new Rook(board, Color.BLACK));
-//        placeNewPiece('a', 8, new King(board, Color.BLACK));
+
+
+        //        Posicionamento das rainhas
+        placeNewPiece('e', 1, new Queen(board, Color.WHITE));
+        placeNewPiece('e', 8, new Queen(board, Color.BLACK));
+
     }
 
 }
