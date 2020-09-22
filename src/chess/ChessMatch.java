@@ -223,11 +223,11 @@ public class ChessMatch {
 //
 //
 //        //        Posicionamento dos cavalos
-//        placeNewPiece('b', 1, new Knight(board, Color.WHITE));
-//        placeNewPiece('g', 1, new Knight(board, Color.WHITE));
-//
-//        placeNewPiece('b', 8, new Knight(board, Color.BLACK));
-//        placeNewPiece('g', 8, new Knight(board, Color.BLACK));
+        placeNewPiece('b', 1, new Knight(board, Color.WHITE));
+        placeNewPiece('g', 1, new Knight(board, Color.WHITE));
+
+        placeNewPiece('b', 8, new Knight(board, Color.BLACK));
+        placeNewPiece('g', 8, new Knight(board, Color.BLACK));
 //
 //
 //        //        Posicionamento dos bispos

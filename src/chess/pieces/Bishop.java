@@ -69,4 +69,5 @@ public class Bishop extends ChessPiece implements Serializable {
 
         return mat;
     }
+
 }
