@@ -80,10 +80,8 @@ public class UI {
             }else{
                 System.out.print(ANSI_YELLOW + piece);
             }
-
         }
         System.out.print(ANSI_RESET+ " ");
-
     }
 
     public static void clearScreen() {
