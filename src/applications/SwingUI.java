@@ -26,6 +26,7 @@ public class SwingUI extends JFrame {
     private JPanel statusPanel;
     private JLabel statusLabel;
     private JPanel capturedPanel;
+
     private JPanel whiteCapturedPanel;
     private JPanel blackCapturedPanel;
     private boolean gameOverDialogShown = false;

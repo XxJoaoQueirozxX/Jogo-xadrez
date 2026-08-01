@@ -34,6 +34,14 @@ public class UI {
     public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
+    /**
+     * Reads a chess position from the input using a {@code Scanner} and parses it into a {@code ChessPosition} object.
+     * The input is expected to be a valid chess position in the range from "a1" to "h8".
+     *
+     * @param sc the {@code Scanner} instance used to read the input.
+     * @return a {@code ChessPosition} object representing the input position.
+     * @throws InputMismatchException if the input does not represent a valid chess position.
+     */
     public static ChessPosition readChessPosition(Scanner sc){
         try{
             String pos = sc.nextLine().trim();
